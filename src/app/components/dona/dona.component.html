@@ -1,0 +1,25 @@
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [colors]="doughnutChartColors" [chartType]="'doughnut'" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+    <div class="col-md-6">
+        <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [colors]="doughnutChartColors" [chartType]="'pie'" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>
+<div class="row justify-content-center mt20">
+    <div class="col col-md-4">
+        <table class="table table-condensed">
+            <tr>
+                <th *ngFor="let label of doughnutChartLabels">{{label}}</th>
+            </tr>
+            <tr>
+                <td *ngFor="let data of doughnutChartData; let j=index">{{data}} kg</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row text-center mt20">
+    <div class="col-md-12">
+        <button class="btn btn-info" (click)="randomize()">Actualizar</button>
+    </div>
+</div>

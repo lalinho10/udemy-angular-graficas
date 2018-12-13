@@ -1,0 +1,5 @@
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <canvas baseChart [datasets]="radarChartData" [labels]="radarChartLabels" [colors]="lineChartColors" [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)"></canvas>
+    </div>
+</div>
